@@ -1,0 +1,59 @@
+<mat-card>
+  <form #rdvForm="ngForm" (ngSubmit)="save(rdvForm.value)">
+    <mat-card-header>
+      <mat-card-title><h2>{{rdv.doctorname ? 'Edit' : 'Add'}} Rdv</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+<mat-card-title>Doctor Name</mat-card-title>
+      <input type="hidden" name="href" [(ngModel)]="rdv.href">
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Doctor Name" [(ngModel)]="rdv.doctorname" 
+required name="doctorname" #name>
+      </mat-form-field>
+</mat-card-content>
+    <mat-card-content>
+<mat-card-title>Patient Name</mat-card-title>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Patient Name" [(ngModel)]="rdv.patientname	" 
+required name="patientname" #name>
+      </mat-form-field>
+</mat-card-content>
+    <mat-card-content>
+<mat-card-title>Location</mat-card-title>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Location" [(ngModel)]="rdv.lieu" 
+required name="lieu" #name>
+      </mat-form-field>
+</mat-card-content>
+    <mat-card-content>
+<mat-card-title>Type</mat-card-title>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Type" [(ngModel)]="rdv.type"
+required name="type" #name>
+      </mat-form-field>
+</mat-card-content>
+
+    <mat-card-content>    
+<mat-card-title>Date</mat-card-title>
+     <mat-form-field appearance="fill">
+    <input matInput [ngxMatDatetimePicker]="date" placeholder="Choose a date & time" [(ngModel)]="rdv.date" required name="date" #name>
+    
+    <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
+
+    <ngx-mat-datetime-picker #date></ngx-mat-datetime-picker>
+</mat-form-field>
+</mat-card-content>
+
+
+
+
+<mat-card-actions>
+      <button mat-raised-button color="primary" type="submit"
+              [disabled]="!rdvForm.valid">Save</button>
+      <button mat-raised-button color="secondary" (click)="remove(rdv.href)"
+              *ngIf="rdv.href" type="button">Delete</button>
+      <a mat-button routerLink="/rdv-list">Cancel</a>
+    </mat-card-actions>
+
+  </form>
+</mat-card>

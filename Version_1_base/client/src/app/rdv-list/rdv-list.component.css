@@ -1,0 +1,11 @@
+/deep/ .mat-button-wrapper {
+  width: 100%;
+
+  span {
+    float: left;
+  }
+
+  fa-icon {
+    float: right;
+  }
+}
