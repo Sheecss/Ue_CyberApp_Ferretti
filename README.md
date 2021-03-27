@@ -16,7 +16,7 @@ Les déscriptions ci-dessous repose sur la Version_1 de ce git.
 
 On commence par générer un spring-boot de base dans la version voulue ce qui nous donne un squelette d'application web sur lequelle on rajoute nos couche voulue.
 
-Le Spring initializr permet de crér cette base :
+Le Spring initializr permet de créer cette base :
 
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/spring%20initializr.PNG "Logo Title Text 1")
 
