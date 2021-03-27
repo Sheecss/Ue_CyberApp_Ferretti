@@ -60,12 +60,31 @@ Enfin, on crée le formulaire qui nous permet de modifier et ajouter des rdvs, o
 Notre application est pour le moment totalement accessible a tous et donc vulnérable à quiconque possède l'url ou à accès au terminal dans le cas d'une app en local.
 Notre premier objectif est donc de crée un portail d'authzentification se basant sur okta afin de filtrer les utilisateurs.
 
-## mise en place sur Spring-Boot :
+## Mise en place sur Spring-Boot :
 
 On commence par configurer la partie sécurité sur le serveur. Pour cela, on va crée une classe SecurityConfiguration qui étend la classe spring-boot WebSecurityConfigurerAdapter. C'est à partir de que l'on va demander à ce que chaque requête http fournisse un jeton jwt qui sera ensuite comparé au données fournies à l'application et présente sur le serveur okta. Cela donne :
 
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/sp_sec.PNG "Logo Title Text 1")
 
-une fois cela fait, la partie serveur est alors bloqué par un portail sécurisé :
+Une fois cela fait, la partie serveur est alors bloqué par un portail sécurisé :
 
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/sp_sec_serv.PNG "Logo Title Text 1")
+
+## Ajout d'un portail sur Angular 8 :
+
+Une fois le serveur vérouillé, on doit ajouter à notre partie Angular une capacité d'authentification. Pour cela, on commence par crée un composant "home" sur lequel on redirigera toutes les arrivées et qui prendra en charge l'authentification. On doit pour cela modifier le routing de notre application avec un nouveau fichier auth-routin.module.ts et dans le même temps on configure ce composant home pour gérer okta :
+
+On ajoute dans le routing les redirections vers /home lors del'arrivée sur le site ainsi que les crédentials fourni par okta pour mettre en place le mécanisme d'authentification. Ce sont les même que ceux inscrit dans application.properties côté serveur :
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/auth_rout.PNG "Logo Title Text 1")
+
+Dans notre composant home, on ajoute la gestion du statut d'authentification avec l'apparition ou non des boutons login/logout :
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/home.PNG "Logo Title Text 1")
+
+Enfin, on ajoute un intercepoteur qui gère les communication entre okta et l'application et qui permet ensuite d'accéder aux données du serveur.
+
+Un fois cela fait, la communication n'est toujours pas possible entre la partie client et serveur malgré la bonne authentification, cela est du au politique CORS du serveur. On va donc ajouter des exceptions pour notre url d'origine :
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/excep_cors.PNG "Logo Title Text 1")
+
