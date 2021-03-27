@@ -34,3 +34,5 @@ Une fois nos items créés, on va ajoutés la possibilité de gérer une base de
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/rdvcontroller.PNG "Logo Title Text 1")
 
 On aura sur l'url http://localhost:8080/rdvs, l'ensemble de nos rdvs en format json.
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/rdv_json.PNG "Logo Title Text 1")
