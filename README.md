@@ -49,9 +49,9 @@ On commence par créer le service rdv qui va gérer l'ajout et la récupération
 
 On met ensuite en place la partie affichage et selection de la liste des rdvs en utilisant des bouton cliquable qui renvoie ensuite vers al page d'édition de l'item voulue. On ajoute aussi un bouton Add :
 
-#Mettre Image
+# Mettre Image
 
 Enfin, on crée le formulaire qui nous permet de modifier et ajouter des rdvs, on utilise ngModel pour remplir les cases avec les vgaleurs actuelles en cas de modification. On peut aussi Supprimer et retourner en arriere :
 
-#Mettre Image
+# Mettre Image
 
