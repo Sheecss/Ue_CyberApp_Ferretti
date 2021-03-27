@@ -95,3 +95,33 @@ jean-marie.ferretti@imt-atlantique.net
 testcyber
 
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/auth_okta.PNG "Logo Title Text 1")
+
+## Sécurisation avec https :
+
+Afin d'aller plus loin, on souhaite utiliser le protocole https sur notre site. Pour le faire côté Angular, il suffit de lancer le client avec la commande : ng serve --ssl true. 
+On a alors un site qui fonctionne en https avec uncertificat généré, celui ci n'est cependant pas connus de Google et on obtient donc :
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/https_1.PNG "Logo Title Text 1")
+
+On va donc maintenant générer des certificats en utilisant le git de Ruben Vermeulen :
+
+git clone https://github.com/RubenVermeulen/generate-trusted-ssl-certificate.git
+cd generate-trusted-ssl-certificate
+bash generate.sh
+
+On fourni ainsi sur ce git un serveur et une clé :
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/https_2.PNG "Logo Title Text 1")
+
+Il faut alors installer le certificat sur la machine de test :
+Pour cela, on va dans le dossier ssl de la version utilisé (ici 4) puis on choisi d'installer le certificat en tant qu'agence de certifications racine tierce.
+
+Enfin, on peut lancer l'application côté serveur avec : 
+ng s -o ---ssl true --ssl-key ssl/server.key  --ssl-cert ssl/server.crt
+
+On obtient finalement :
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/certif_https.PNG "Logo Title Text 1")
+
+Notre angular fonctionne alors en https.
+
