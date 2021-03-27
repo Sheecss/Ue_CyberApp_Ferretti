@@ -61,4 +61,4 @@ Si on imagine un problème de pishing quelconque qui nous conduit à cliquer sur
 
 On voit que springboot permet d'acceder à cette url :
 
-![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/rdv_service.PNG "Logo Title Text 1")
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/ex_xss.PNG "Logo Title Text 1")
