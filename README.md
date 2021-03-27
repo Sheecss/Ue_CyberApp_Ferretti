@@ -141,3 +141,7 @@ On force ensuite spring-boot à utilisé le https et on ajouté les propriétés
 Cela nous permet ainsi de rediriger les requêtes vers le port 8443 d'où :
 
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/https_7.PNG "Logo Title Text 1")
+
+## Protection contre la multiplicité des requêtes :
+
+
