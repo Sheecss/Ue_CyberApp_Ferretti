@@ -27,6 +27,8 @@ Une fois cette première étape effectuée, on rajoute notre couche personelle a
 
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/classe_rdv.PNG "Logo Title Text 1")
 
-Une fois nos items créés, on va ajoutés la possibilité de gérer une base de données avec un controller et un repository qui nous permettra de stocker nos rdv.
+Une fois nos items créés, on va ajoutés la possibilité de gérer une base de données avec un controller et un repository qui nous permettra de stocker nos rdv. Ce controller nous permet de mapper sur une url http://localhost:8080/rdv-liste qui contiendra une liste des rdvs que l'on récupérera sur notre interface angular.
 
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/rdvcontroller.PNG "Logo Title Text 1")
+
+On aura sur l'url http://localhost:8080/rdvs, l'ensemble de nos rdvs en format json.
