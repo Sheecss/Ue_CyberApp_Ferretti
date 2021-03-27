@@ -6,4 +6,10 @@ Ce document est un rendu/mode d'emploir pour le projet d'application web de l'UE
 
 ## L'application
 
+Cette application a été développé en s'appuyant sur différent tutorials et cours sur Angular 8 et spring-Boot, l'objectif est de crée un système simple de gestion de rendez-vous pour une secrétaire. On limite notre application à un système de savegarde/édition/suppression des rendez-vous.
+
+Les déscriptions ci-dessous repose sur la Version_1 de ce git.
+
 ### Le back-end avec Spring-Boot
+
+
