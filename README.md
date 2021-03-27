@@ -15,6 +15,5 @@ Les déscriptions ci-dessous repose sur la Version_1 de ce git.
 On commence par générer un spring-boot de base dans la version voulue ce qui nous donne un squelette d'application web sur lequelle on rajoute nos couche voulue.
 
 Les dépendences principales sont : 
-
-Inline-style: 
+ 
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/Capture.PNG "Logo Title Text 1")
