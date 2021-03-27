@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,7 +8,6 @@ import { RdvListComponent } from './rdv-list/rdv-list.component';
 import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
 import { RdvEditComponent } from './rdv-edit/rdv-edit.component';
 import { FormsModule } from '@angular/forms';
-import { AuthRoutingModule } from './auth-routing.module';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule,NgxMatNativeDateModule} from '@angular-material-components/datetime-picker';
@@ -33,7 +31,7 @@ import { NgxMatDatetimePickerModule, NgxMatTimepickerModule,NgxMatNativeDateModu
     MatListModule,
     MatToolbarModule,
     FormsModule,
-    AuthRoutingModule,
+
 MatDatepickerModule,
 MatNativeDateModule,
 NgxMatDatetimePickerModule,NgxMatNativeDateModule,NgxMatTimepickerModule
