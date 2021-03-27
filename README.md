@@ -12,6 +12,8 @@ Les déscriptions ci-dessous repose sur la Version_1 de ce git.
 
 ### Le back-end avec Spring-Boot
 
+#### Pour lancer l'application, on fait un run maven build sur eclipse et on choisi spring-boot:run
+
 On commence par générer un spring-boot de base dans la version voulue ce qui nous donne un squelette d'application web sur lequelle on rajoute nos couche voulue.
 
 Le Spring initializr permet de crér cette base :
