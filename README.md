@@ -42,3 +42,16 @@ On aura sur l'url http://localhost:8080/rdvs, l'ensemble de nos rdvs en format j
 #### Pour lancer l'application, on fait un run ng serve dans le répertoire Version_X/client
 
 #### Pour notre partie Angular, en plus des composants habituel, on installe le package suivant : npm install --save ngx-mat-datetime-picker@2.0
+
+On commence par créer le service rdv qui va gérer l'ajout et la récupération des rdvs, pour cela on utilise les mapping fait sous java ce qui donne :
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/rdv_service.PNG "Logo Title Text 1")
+
+On met ensuite en place la partie affichage et selection de la liste des rdvs en utilisant des bouton cliquable qui renvoie ensuite vers al page d'édition de l'item voulue. On ajoute aussi un bouton Add :
+
+#Mettre Image
+
+Enfin, on crée le formulaire qui nous permet de modifier et ajouter des rdvs, on utilise ngModel pour remplir les cases avec les vgaleurs actuelles en cas de modification. On peut aussi Supprimer et retourner en arriere :
+
+#Mettre Image
+
