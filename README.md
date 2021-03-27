@@ -88,3 +88,9 @@ Un fois cela fait, la communication n'est toujours pas possible entre la partie 
 
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/excep_cors.PNG "Logo Title Text 1")
 
+On a alors une application qui a mise en place un système d'authentification sécurisé restreint actuellement à une seul identifiant qui sera pour ce test :
+
+jean-marie.ferretti@imt-atlantique.net
+testcyber
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/auth_okta.PNG "Logo Title Text 1")
