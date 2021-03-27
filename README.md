@@ -33,6 +33,12 @@ Une fois nos items créés, on va ajoutés la possibilité de gérer une base de
 
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/rdvcontroller.PNG "Logo Title Text 1")
 
-On aura sur l'url http://localhost:8080/rdvs, l'ensemble de nos rdvs en format json.
+On aura sur l'url http://localhost:8080/rdvs, l'ensemble de nos rdvs en format json :
 
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/rdv_json.PNG "Logo Title Text 1")
+
+### Le front-end avec Angular 8
+
+#### Pour lancer l'application, on fait un run ng serve dans le répertoire Version_X/client
+
+#### Pour notre partie Angular, en plus des composants habituel, on installe le package suivant : npm install --save ngx-mat-datetime-picker@2.0
