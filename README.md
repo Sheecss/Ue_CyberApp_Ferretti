@@ -124,4 +124,17 @@ On obtient finalement :
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/certif_https.PNG "Logo Title Text 1")
 
 Notre angular fonctionne alors en https.
+On veut aussi ajouter le protocole https sur notre backend springboot. Cependant, malgré mes essais multiples, je n'ai pas réussi à faire accepté le certificat par chrome ce qui amène à bloquer la communication entre back et front.
+
+Je propose donc ci-dessous l'implémentation du ssl sur spring-boot mais ce sera pour informùation :
+On commence par générer un certificat que l'on signer soi-même avec java keytool :
+
+ -genkey -alias server -keyalg RSA -keysize 2048 -keystore D:\....\ressources\myserver.jks -dname "CN=myserver,OU=IT-WebDev, O=TIACHOP, L=HCM, ST=0753, C=VN" && keytool -certreq -alias server -file D:\....\ressources\myserver.csr -keystore D:\....\ressources\myserver.jks
+ 
+Les différents fichiers sont ajouté dans le dossier ressource de notre version.
+On force ensuite spring-boot à utilisé le https et on ajouté les propriétés dans application.properties :
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/https-4.PNG "Logo Title Text 1")
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/https_5.PNG "Logo Title Text 1")
 
