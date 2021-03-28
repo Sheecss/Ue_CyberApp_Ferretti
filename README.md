@@ -47,13 +47,15 @@ On commence par créer le service rdv qui va gérer l'ajout et la récupération
 
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/rdv_service.PNG "Logo Title Text 1")
 
-On met ensuite en place la partie affichage et selection de la liste des rdvs en utilisant des bouton cliquable qui renvoie ensuite vers al page d'édition de l'item voulue. On ajoute aussi un bouton Add :
+On met ensuite en place la partie affichage et selection de la liste des rdvs en utilisant des bouton cliquable qui renvoie ensuite vers la page d'édition de l'item voulu. On ajoute aussi un bouton Add :
 
-# Mettre Image
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/rdv_list.PNG "Logo Title Text 1")
 
-Enfin, on crée le formulaire qui nous permet de modifier et ajouter des rdvs, on utilise ngModel pour remplir les cases avec les vgaleurs actuelles en cas de modification. On peut aussi Supprimer et retourner en arriere :
+Enfin, on crée le formulaire qui nous permet de modifier et ajouter des rdvs, on utilise ngModel pour remplir les cases avec les vgaleurs actuelles en cas de modification. On peut aussi Supprimer et retourner en arrière :
 
-# Mettre Image
+
+![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/add_rdv.PNG "Logo Title Text 1")
+
 
 ## Sécurisation de l'application avec Spring-Boot Security, Okta et Angular :
 
@@ -142,6 +144,6 @@ Cela nous permet ainsi de rediriger les requêtes vers le port 8443 d'où :
 
 ![alt text](https://github.com/Sheecss/Ue_CyberApp_Ferretti/blob/main/img/https_7.PNG "Logo Title Text 1")
 
-## Protection contre la multiplicité des requêtes :
+## Conclusion
 
 

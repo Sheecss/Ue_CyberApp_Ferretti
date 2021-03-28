@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-@Injectable({providedIna: 'root'})
+@Injectable({providedIn: 'root'})
 export class RdvService {
   public API = 'http://localhost:8080';
   public RDV_API = this.API + '/rdvs';
