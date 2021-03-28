@@ -146,4 +146,4 @@ Cela nous permet ainsi de rediriger les requêtes vers le port 8443 d'où :
 
 ## Conclusion
 
-
+On a donc développé une petite application web avec un front angular 8 et un back basé sur spring boot.  On y a ajouté deux couches de sécurisation afin de démontrer les capacités d'angular à intégrer des ajouts. Il faut cependant remarquer que Angular possède certaines protection de base, notamment le filtrage et nettoyage des urls.
