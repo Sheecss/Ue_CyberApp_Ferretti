@@ -15,9 +15,7 @@ export class RdvListComponent implements OnInit {
   ngOnInit() {
     this.rdvService.getAll().subscribe(data => {
       this.rdvs = data;
-      for (const rdv of this.rdvs) {
-        this.giphyService.get(rdv.lieu).subscribe(url => rdv.giphyUrl = url);
-      }
+      
     });
   }
 }

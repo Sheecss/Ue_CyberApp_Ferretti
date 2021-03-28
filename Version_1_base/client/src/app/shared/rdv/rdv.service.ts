@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-@Injectable({providedIn: 'root'})
+@Injectable({providedIna: 'root'})
 export class RdvService {
-  public API = '//localhost:8080';
+  public API = 'http://localhost:8080';
   public RDV_API = this.API + '/rdvs';
 
   constructor(private http: HttpClient) {

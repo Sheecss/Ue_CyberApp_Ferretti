@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RdvService } from '../shared/rdv/rdv.service';
-import { GiphyService } from '../shared/giphy/giphy.service';
+
 
 @Component({
   selector: 'app-rdv-list',
@@ -10,14 +10,12 @@ import { GiphyService } from '../shared/giphy/giphy.service';
 export class RdvListComponent implements OnInit {
   rdvs: Array<any>;
 
-  constructor(private rdvService: RdvService, private giphyService: GiphyService) { }
+  constructor(private rdvService: RdvService) { }
 
   ngOnInit() {
     this.rdvService.getAll().subscribe(data => {
       this.rdvs = data;
-      for (const rdv of this.rdvs) {
-        this.giphyService.get(rdv.lieu).subscribe(url => rdv.giphyUrl = url);
-      }
+      
     });
   }
 }

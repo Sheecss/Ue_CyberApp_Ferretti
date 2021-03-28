@@ -16,7 +16,7 @@ class RdvController {
     }
 
     @GetMapping("/rdv-liste")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://localhost:4200")
     public Collection<Rdv> rdv() {
         return repository.findAll().stream().collect(Collectors.toList());
     }

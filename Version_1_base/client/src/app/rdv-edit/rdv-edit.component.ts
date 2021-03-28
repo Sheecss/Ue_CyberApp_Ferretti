@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RdvService } from '../shared/rdv/rdv.service';
-import { GiphyService } from '../shared/giphy/giphy.service';
+
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -18,7 +18,7 @@ export class RdvEditComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute,
               private router: Router,
               private rdvService: RdvService,
-              private giphyService: GiphyService) {
+              ) {
   }
 
   ngOnInit() {
@@ -29,7 +29,7 @@ export class RdvEditComponent implements OnInit, OnDestroy {
           if (rdv) {
             this.rdv = rdv;
             this.rdv.href = rdv._links.self.href;
-            this.giphyService.get(rdv.name).subscribe(url => rdv.giphyUrl = url);
+            
           } else {
             console.log(`Rdv with id '${id}' not found, returning to list`);
             this.gotoList();
