@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-title>Appointments</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+<mat-card-title>------ Doctor Name ------ Patient Name ------ Apt Location ------ Date and Time ------ Apt Type ------</mat-card-title>
+      <mat-list-item  style="height:auto" *ngFor="let rdv of rdvs">
+      
+        <h3 mat-line>
+          <a mat-button [routerLink]="['/rdv-edit', rdv.id]">      <mat-form-field appearance="fill">
+        <input matInput placeholder="Doctor Name" [(ngModel)]="rdv.doctorname" 
+required name="doctorname" #name [disabled]="true">
+      </mat-form-field>        <mat-form-field appearance="fill">
+        <input matInput placeholder="Patient Name" [(ngModel)]="rdv.patientname	" 
+required name="patientname" #name [disabled]="true">
+      </mat-form-field>      <mat-form-field appearance="fill">
+        <input matInput placeholder="Location" [(ngModel)]="rdv.lieu" 
+required name="lieu" #name [disabled]="true">
+      </mat-form-field>         
+
+     <mat-form-field appearance="fill">
+    <input matInput [ngxMatDatetimePicker]="date" placeholder="Choose a date & time" [(ngModel)]="rdv.date" required name="date" #name [disabled]="true">
+    
+    <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
+
+    <ngx-mat-datetime-picker #date></ngx-mat-datetime-picker>
+</mat-form-field>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Type" [(ngModel)]="rdv.type"
+required name="type" #name [disabled]="true">
+      </mat-form-field></a>
+        </h3>
+
+      </mat-list-item>
+
+    </mat-list>
+  </mat-card-content>
+  
+  <button mat-fab color="primary" [routerLink]="['/rdv-add']">Add</button>
+</mat-card>
